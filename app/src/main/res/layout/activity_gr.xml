@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.thilina.e1.GrActivity"
+    android:background="#C8E9FA">
+
+
+    <Button
+        android:id="@+id/btnOrganic"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="63dp"
+        android:background="@drawable/organic_image"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/btnPlastic"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:background="@drawable/plastic_image"
+        android:layout_alignTop="@+id/btnOrganic"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/btnPaper"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/paper_image"
+        android:layout_alignBottom="@+id/btnPlastic"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/btnGlass"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:background="@drawable/glass_image"
+        android:layout_marginTop="26dp"
+        android:layout_below="@+id/textViewOrganic"
+        android:layout_alignRight="@+id/textViewOrganic"
+        android:layout_alignEnd="@+id/textViewOrganic" />
+
+    <Button
+        android:id="@+id/btnMetal"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:background="@drawable/metal_image"
+        android:layout_alignTop="@+id/btnGlass"
+        android:layout_alignLeft="@+id/btnPlastic"
+        android:layout_alignStart="@+id/btnPlastic" />
+
+    <Button
+        android:id="@+id/btnElectronic"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:background="@drawable/electronic_image"
+        android:layout_alignTop="@+id/btnMetal"
+        android:layout_alignLeft="@+id/btnPaper"
+        android:layout_alignStart="@+id/btnPaper" />
+
+    <TextView
+        android:id="@+id/textViewOrganic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/btnOrganic"
+        android:layout_alignRight="@+id/btnOrganic"
+        android:layout_below="@+id/btnOrganic"
+        android:layout_marginTop="15dp"
+        android:textSize="18sp"
+        android:text="0.0"/>
+
+    <TextView
+        android:id="@+id/textViewPlastic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.0"
+        android:textSize="18sp"
+        android:layout_alignBottom="@+id/textViewOrganic"
+        android:layout_alignRight="@+id/btnPlastic"
+        android:layout_alignEnd="@+id/btnPlastic" />
+
+    <TextView
+        android:id="@+id/textViewPaper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/btnPaper"
+        android:layout_alignRight="@+id/btnPaper"
+        android:layout_alignTop="@+id/textViewPlastic"
+        android:text="0.0"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textViewGlass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/btnGlass"
+        android:layout_alignRight="@+id/btnGlass"
+        android:layout_below="@+id/btnGlass"
+        android:layout_marginTop="11dp"
+        android:text="0.0"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textViewMetal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewGlass"
+        android:layout_alignBottom="@+id/textViewGlass"
+        android:layout_alignEnd="@+id/textViewPlastic"
+        android:layout_alignRight="@+id/textViewPlastic"
+        android:text="0.0"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textViewElectronic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textViewMetal"
+        android:layout_alignEnd="@+id/btnElectronic"
+        android:layout_alignRight="@+id/btnElectronic"
+        android:text="0.0"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_below="@+id/textViewGlass"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="31dp"
+        android:background="@drawable/button_shape_ovel"
+        android:text="Submit"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="80dp"
+        android:layout_height="25dp"
+        android:layout_alignLeft="@+id/textViewOrganic"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/textViewOrganic"
+        android:layout_marginTop="21dp"
+        android:background="@drawable/button_shape_ovel"
+        android:text="user id"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"/>
+
+    <EditText
+        android:id="@+id/id"
+        android:layout_width="150dp"
+        android:layout_height="25dp"
+        android:layout_alignLeft="@+id/textViewPlastic"
+        android:layout_alignStart="@+id/textViewPlastic"
+        android:layout_alignTop="@+id/textView"
+        android:background="@drawable/textview_shape_ovel"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="" />
+
+
+</RelativeLayout>
