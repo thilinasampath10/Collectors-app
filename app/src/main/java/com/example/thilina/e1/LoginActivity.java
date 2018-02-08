@@ -40,15 +40,15 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        Intent i=new Intent(LoginActivity.this,MapActivity.class);
-
+        Intent i=new Intent(LoginActivity.this,GrDogActivity.class);
+        startActivity(i);
 
         prefs=getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
         editor=prefs.edit();
 
         if(prefs.getBoolean("isLoggedIn",false)){
 
-            startActivity(i);
+
         }
 
         usernameET = (EditText) findViewById(R.id.txtUsername);

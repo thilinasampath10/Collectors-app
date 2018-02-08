@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.thilina.e1.GrDogActivity"
+    android:background="#C8E9FA">
+
+    <Button
+        android:id="@+id/btnFood"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:layout_below="@+id/textView7"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/food_waste" />
+
+    <TextView
+        android:id="@+id/txtViewFood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnFood"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="43dp"
+        android:textSize="18sp"
+        android:text="0.0" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtViewFood"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="74dp"
+        android:background="@drawable/button_shape_ovel"
+        android:text="Submit" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="26dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginTop="34dp"
+        android:layout_toLeftOf="@+id/txtViewFood"
+        android:layout_toStartOf="@+id/txtViewFood"
+        android:background="@drawable/button_shape_ovel"
+        android:backgroundTint="@drawable/button_shape_ovel"
+        android:textSize="18sp"
+        android:text="Request_id" />
+
+    <TextView
+        android:id="@+id/id"
+        android:layout_width="120dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@+id/textView7"
+        android:layout_alignLeft="@+id/txtViewFood"
+        android:layout_alignStart="@+id/txtViewFood"
+        android:background="@drawable/textview_shape_ovel"
+        android:text="" />
+
+</RelativeLayout>

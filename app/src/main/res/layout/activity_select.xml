@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.thilina.e1.SelectActivity">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="29dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="39dp"
+        android:text="Click on the image to select service"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="36dp" />
+
+    <ImageButton
+        android:id="@+id/btnDaily"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_below="@+id/textView3"
+        android:layout_marginTop="37dp"
+        app:srcCompat="@drawable/daily" />
+
+    <ImageButton
+        android:id="@+id/btnDog"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+
+        android:layout_alignLeft="@+id/btnDaily"
+        android:layout_alignStart="@+id/btnDaily"
+        android:layout_below="@+id/btnDaily"
+        android:layout_marginTop="62dp"
+        app:srcCompat="@drawable/dog" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btnDaily"
+        android:layout_marginLeft="23dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="38dp"
+        android:layout_toEndOf="@+id/btnDaily"
+        android:layout_toRightOf="@+id/btnDaily"
+        android:text="Daily service" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_alignStart="@+id/textView4"
+        android:layout_alignTop="@+id/btnDog"
+        android:layout_marginTop="35dp"
+        android:text="Dog food" />
+
+</RelativeLayout>

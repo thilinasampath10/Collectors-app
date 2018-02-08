@@ -37,7 +37,10 @@
         </activity>
         <activity android:name=".MapActivity" />
         <activity android:name=".RequestList" />
-        <activity android:name=".GrActivity"></activity>
+        <activity android:name=".GrActivity" />
+        <activity android:name=".SelectActivity" />
+        <activity android:name=".DogMapActivity" />
+        <activity android:name=".GrDogActivity"></activity>
     </application>
 
 </manifest>
