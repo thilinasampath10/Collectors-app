@@ -1,21 +1,16 @@
 package com.example.thilina.e1;
 
-import android.*;
 import android.Manifest;
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
-import android.location.LocationListener;
 import android.location.LocationManager;
-import android.os.Message;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -23,9 +18,6 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
-import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
-import com.google.android.gms.common.GooglePlayServicesRepairableException;
-import com.google.android.gms.location.places.ui.PlacePicker;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -39,14 +31,13 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
 public class MapActivity extends AppCompatActivity implements OnMapReadyCallback {
 
     final String Url = "http://192.168.8.100:8000/api/getLocations";
-    Button mapButton,btnLogout;
+    Button mapButton,btnRedeem;
 
     GoogleMap gMap;
     SharedPreferences prefs;
@@ -143,12 +134,11 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
 
 
 
-        btnLogout = (Button) findViewById(R.id.btnLogout);
-        btnLogout.setOnClickListener(new View.OnClickListener() {
+        btnRedeem = (Button) findViewById(R.id.btnLogout);
+        btnRedeem.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                editor.putBoolean("isLoggedIn",false);
-                editor.commit();
-            Intent i=new Intent(MapActivity.this,LoginActivity.class);
+
+            Intent i=new Intent(MapActivity.this,Redeem.class);
             startActivity(i);
             }
         });
@@ -173,7 +163,14 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
 
                     JSONArray jsonArray = new JSONArray(response);
 
+
                     for (int i = 0; i < jsonArray.length(); i++) {
+
+                        if(jsonArray.getJSONObject(0).equals(null)){
+                            Toast.makeText(MapActivity.this,"No more Locations",Toast.LENGTH_LONG).show();
+                        }
+
+
                         JSONObject jsonObject = jsonArray.getJSONObject(i);
 
                         String latlng=jsonObject.getString("Lplace");

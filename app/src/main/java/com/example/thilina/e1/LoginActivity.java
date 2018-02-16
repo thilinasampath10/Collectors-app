@@ -40,13 +40,17 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        Intent i=new Intent(LoginActivity.this,GrDogActivity.class);
-        startActivity(i);
+       // Intent i=new Intent(LoginActivity.this,SelectActivity.class);
+       // startActivity(i);
 
         prefs=getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
         editor=prefs.edit();
 
         if(prefs.getBoolean("isLoggedIn",false)){
+            Intent i=new Intent(LoginActivity.this,SelectActivity.class) ;
+            startActivity(i);
+            Toast.makeText(LoginActivity.this,"Logged In!!",Toast.LENGTH_SHORT).show();
+            finish();
 
 
         }
@@ -86,7 +90,7 @@ public class LoginActivity extends AppCompatActivity {
                                 String cId=cIdobj.getString("id");
                                 editor.putString("cId",cId);
                                 editor.commit();
-                                Intent i=new Intent(LoginActivity.this,MapActivity.class);
+                                Intent i=new Intent(LoginActivity.this,SelectActivity.class);
                                 Toast.makeText(LoginActivity.this,prefs.getString("cId",null),Toast.LENGTH_LONG).show();
 
                                 startActivity(i);

@@ -40,7 +40,8 @@
         <activity android:name=".GrActivity" />
         <activity android:name=".SelectActivity" />
         <activity android:name=".DogMapActivity" />
-        <activity android:name=".GrDogActivity"></activity>
+        <activity android:name=".GrDogActivity" />
+        <activity android:name=".Redeem"></activity>
     </application>
 
 </manifest>

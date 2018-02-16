@@ -31,7 +31,7 @@ public class GrDogActivity extends AppCompatActivity implements NumberPicker.OnV
     TextView tv,id;
     Button b;
     String v1,v2;
-    String url="http://192.168.8.100:8000/api/collectorSend";
+    String url="http://192.168.8.100:8000/api/collectorDogFoodSend";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,7 +77,7 @@ public class GrDogActivity extends AppCompatActivity implements NumberPicker.OnV
 
                             else{
 
-                                Intent k = new Intent(GrDogActivity.this, MapActivity.class);
+                                Intent k = new Intent(GrDogActivity.this,DogMapActivity.class);
                                 startActivity(k);
                             }
 
@@ -96,7 +96,7 @@ public class GrDogActivity extends AppCompatActivity implements NumberPicker.OnV
                     @Override
                     protected Map<String, String> getParams() throws AuthFailureError {
                         Map<String,String> params = new HashMap<String, String>();
-                        params.put("DogFood",v1);
+                        params.put("realDogFoodQuantity",v1);
                         params.put("requestId",v2);
                         return params;
                     }
